@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR16235406.forward.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235406.forward.filtered_fastqc.zip
+FastQC	all_sections	SRR16235395.forward.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235395.forward.filtered_fastqc.zip
+FastQC	all_sections	SRR16235398.forward.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235398.forward.filtered_fastqc.zip
+FastQC	all_sections	SRR16235406	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235406.merged.filtered_fastqc.zip
+FastQC	all_sections	SRR16235395	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235395.merged.filtered_fastqc.zip
+FastQC	all_sections	SRR16235397.forward.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235397.forward.filtered_fastqc.zip
+FastQC	all_sections	SRR16235406.reverse.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235406.reverse.filtered_fastqc.zip
+FastQC	all_sections	SRR16235398.reverse.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235398.reverse.filtered_fastqc.zip
+FastQC	all_sections	SRR16235395.reverse.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235395.reverse.filtered_fastqc.zip
+FastQC	all_sections	SRR16235397.reverse.filtered	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235397.reverse.filtered_fastqc.zip
+FastQC	all_sections	SRR16235398	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235398.merged.filtered_fastqc.zip
+FastQC	all_sections	SRR16235397	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/extracted_fastqc/SRR16235397.merged.filtered_fastqc.zip

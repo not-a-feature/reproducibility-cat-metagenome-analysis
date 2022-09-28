@@ -1,0 +1,17 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR16235397.utf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235397.utf_fastqc.zip
+FastQC	all_sections	SRR16235397.um	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235397.um_fastqc.zip
+FastQC	all_sections	SRR16235395.utf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235395.utf_fastqc.zip
+FastQC	all_sections	SRR16235397.ptf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235397.ptf_fastqc.zip
+FastQC	all_sections	SRR16235395.ptf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235395.ptf_fastqc.zip
+FastQC	all_sections	SRR16235398.ptr	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235398.ptr_fastqc.zip
+FastQC	all_sections	SRR16235395.ptr	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235395.ptr_fastqc.zip
+FastQC	all_sections	SRR16235397.ptr	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235397.ptr_fastqc.zip
+FastQC	all_sections	SRR16235398.um	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235398.um_fastqc.zip
+FastQC	all_sections	SRR16235406.ptf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235406.ptf_fastqc.zip
+FastQC	all_sections	SRR16235398.ptf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235398.ptf_fastqc.zip
+FastQC	all_sections	SRR16235398.utf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235398.utf_fastqc.zip
+FastQC	all_sections	SRR16235406.um	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235406.um_fastqc.zip
+FastQC	all_sections	SRR16235406.ptr	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235406.ptr_fastqc.zip
+FastQC	all_sections	SRR16235395.um	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235395.um_fastqc.zip
+FastQC	all_sections	SRR16235406.utf	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/trimmdich_fastqc/SRR16235406.utf_fastqc.zip

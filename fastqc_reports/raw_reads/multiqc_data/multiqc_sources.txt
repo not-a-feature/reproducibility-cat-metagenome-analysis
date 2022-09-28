@@ -1,0 +1,9 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR16235398_2	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235398_2_fastqc.zip
+FastQC	all_sections	SRR16235395_1	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235395_1_fastqc.zip
+FastQC	all_sections	SRR16235397_1	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235397_1_fastqc.zip
+FastQC	all_sections	SRR16235398_1	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235398_1_fastqc.zip
+FastQC	all_sections	SRR16235397_2	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235397_2_fastqc.zip
+FastQC	all_sections	SRR16235406_2	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235406_2_fastqc.zip
+FastQC	all_sections	SRR16235406_1	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235406_1_fastqc.zip
+FastQC	all_sections	SRR16235395_2	/home/jules/Bioinformatik/1.SS22/Bioinfo_tools/CAT/new_fastqc/raw_reads/SRR16235395_2_fastqc.zip
