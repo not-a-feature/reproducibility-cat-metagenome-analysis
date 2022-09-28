@@ -7,8 +7,7 @@ set -e
 # INPUT = reference fasta
 
 INPUT=$1
-
-WS="/workspace/reproducibility-cat-metagenome-analysis"
+WS=$2
 
 PYTHON_SCRIPT="$WS/pipeline/filter_short_contigs.py"
 PY_OUT_PATH="$WS/data/assembly/metagen_ref_filtered.fa"

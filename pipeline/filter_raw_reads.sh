@@ -7,8 +7,7 @@ set -e
 # Read name
 INPUT=$1
 BASENAME=$(basename $INPUT)
-
-WS="/workspace/reproducibility-cat-metagenome-analysis"
+WS=$2
 
 # Path to PEAR binary
 PEAR_BINARY=$WS/pipeline/pear-0.9.11-linux-x86_64/bin/pear

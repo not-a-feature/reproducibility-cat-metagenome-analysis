@@ -7,7 +7,7 @@ set -e
 INPUT=$1
 BASENAME=$(basename $INPUT)
 
-WS="/workspace/reproducibility-cat-metagenome-analysis"
+WS=$2
 
 METAGENOME="$WS/data/bwa_indiv/metagen_ref.fa"
 RELFREQSCRIPT="$WS/pipeline/relative-frequencies.py"

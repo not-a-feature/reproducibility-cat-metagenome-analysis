@@ -3,7 +3,7 @@ set -e
 
 # Creates a metagenomic reference using megahit
 # Takes 4 sample ids as input
-WS="/workspace/reproducibility-cat-metagenome-analysis"
+WS=$5
 
 INPUT_1=$1
 ID_1=$(basename $INPUT_1)

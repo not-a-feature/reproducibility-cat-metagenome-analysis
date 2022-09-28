@@ -4,7 +4,6 @@ set -e
 # Download and prepare all necessary files from the NCBI archives
 # Takes 4 sample ids as input
 
-WS="/workspace/reproducibility-cat-metagenome-analysis"
 VIRAL_REFERENCE_GENOME="$WS/data/bwa/viral_merged.faa"
 
 INPUT_1=$1
@@ -15,6 +14,8 @@ INPUT_3=$3
 ID_3=$(basename $INPUT_3)
 INPUT_4=$4
 ID_4=$(basename $INPUT_4)
+
+WS=$5
 
 # Raw Reads
 # Download 4 of the 16 raw reads from the SRA.
