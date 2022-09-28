@@ -21,7 +21,7 @@ source $CONDA_SH_PATH
 conda activate cat-base-env
 
 # Download files
-$WS/pipeline/downlad_data.sh $ID_1 $ID_2 $ID_3 $ID_4
+$WS/pipeline/download_data.sh $ID_1 $ID_2 $ID_3 $ID_4
 
 # Filter cat and viral contamination
 $WS/pipeline/filter_raw_reads.sh $ID_1 $WS
