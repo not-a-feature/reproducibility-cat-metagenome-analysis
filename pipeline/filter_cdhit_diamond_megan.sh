@@ -13,7 +13,9 @@ WS="/workspace/reproducibility-cat-metagenome-analysis"
 PYTHON_SCRIPT="$WS/pipeline/filter_short_contigs.py"
 PY_OUT_PATH="$WS/data/assembly/metagen_ref_filtered.fa"
 
-# Path to cd-hit-est
+# Path to cd-hit-est binary
+# Or replace: CDHIT_BIN="cd-hit-est" when using the conda installation
+
 CDHIT_BIN="$WS/pipeline/cdhit/cd-hit-est"
 
 OUT_PATH="$WS/data/assembly/metagen_ref_filtered_cdhit.fa"
