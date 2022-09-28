@@ -2,9 +2,10 @@
 set -e
 
 # Download and prepare all necessary files from the NCBI archives
-WS="/workspace/reproducibility-cat-metagenome-analysis"
 
+WS="/workspace/reproducibility-cat-metagenome-analysis"
 VIRAL_REFERENCE_GENOME="$WS/data/bwa/viral_merged.faa"
+
 # Raw Reads
 # Download 4 of the 16 raw reads from the SRA.
 fastq-dump SRR16235395 --split-3 --outdir $WS/data/raw_reads/
@@ -29,6 +30,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.3.genomic.gbff.gz \
 wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.4.genomic.gbff.gz \
   -O $WS/data/bwa/viral.4.genomic.faa.gz
 
+# Unpack and merge
 zcat $WS/data/bwa/viral.*.faa.gz > $WS/data/bwa/viral_merged.faa
-
+# Index for further use
 bwa index $VIRAL_REFERENCE_GENOME

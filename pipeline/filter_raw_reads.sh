@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# Takes sample id (eg.: SRR16235395) as input alignes the reads against the feline
-# and viral reference genome. Matches are againts those references are filtered out. 
+# Takes sample id (eg.: SRR16235395) as input, aligns the reads against the feline
+# and viral reference genome. Matches againts those references are filtered out. 
 
 # Read name
 INPUT=$1

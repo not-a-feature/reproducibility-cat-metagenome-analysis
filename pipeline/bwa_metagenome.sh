@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Takes sample id (eg.: SRR16235395) as input alignes the reads preprocessed reads
+# Takes sample id (eg.: SRR16235395) as input, aligns the preprocessed reads
 # against the metagenome reference.
 
 INPUT=$1
