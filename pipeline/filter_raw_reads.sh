@@ -75,12 +75,14 @@ cat $PEAR_MERGED $UNPAIRED_TRIMMED_FORWARD $UNPAIRED_TRIMMED_REVERSE > $UNPAIRED
 
 # filter cat
 
-echo "Filtering cats."
+
 echo "Map vs. cat reference."
+echo "Filtering cats. 1/2"
 bwa mem -t 25 \
    $CAT_REFERENCE_GENOME \
    $PEAR_FORWARD $PEAR_REVERSE \
    -o "$BWA_OUTPUT_DIR/$BASENAME.cataligned.pe.bam"
+echo "Filtering cats. 2/2"
 bwa mem -t 25 \
    $CAT_REFERENCE_GENOME \
    $UNPAIRED_MERGED \
@@ -101,9 +103,10 @@ python3 $FILTER_SCRIPT -l $INDEX_FILE_MERGED -fq $UNPAIRED_MERGED -o $NOCAT_MERG
 
 # filter virus
 
-echo "Filtering viruses."
 echo "Map vs. virus reference."
+echo "Filtering viruses. 1/2"
 bwa mem -t 25 $VIRAL_REFERENCE_GENOME $NOCAT_FORWARD $NOCAT_REVERSE -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.pe.bam"
+echo "Filtering viruses. 2/2"
 bwa mem -t 25 $VIRAL_REFERENCE_GENOME $NOCAT_MERGED -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.merged.bam"
 
 echo "Extracting headers."
@@ -119,7 +122,7 @@ python3 $FILTER_SCRIPT -l $NOCAT_INDEX_FILE_UNMERGED -fq $NOCAT_FORWARD -o "$WS/
 python3 $FILTER_SCRIPT -l $NOCAT_INDEX_FILE_UNMERGED -fq $NOCAT_REVERSE -o "$WS/data/extracted/$BASENAME.reverse.filtered.fq"
 python3 $FILTER_SCRIPT -l $NOCAT_INDEX_FILE_MERGED -fq $NOCAT_MERGED -o "$WS/data/extracted/$BASENAME.merged.filtered.fq"
 
-
+echo "Create fastqc reports"
 fastqc -t 20 $TRIMMED_PATH/*.fastq \
     || fastqc -t 20 $WS/data/pear_reads/*.fastq \
     || fastqc -t 20 $WS/data/extracted/*.fq \

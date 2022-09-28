@@ -20,13 +20,18 @@ WS=$5
 # Raw Reads
 # Download 4 of the 16 raw reads from the SRA.
 fastq-dump $ID_1 --split-3 --outdir $WS/data/raw_reads/
+echo "Raw read download: 1/4 complete"
 fastq-dump $ID_2 --split-3 --outdir $WS/data/raw_reads/
+echo "Raw read download: 2/4 complete"
 fastq-dump $ID_3 --split-3 --outdir $WS/data/raw_reads/
+echo "Raw read download: 3/4 complete"
 fastq-dump $ID_4 --split-3 --outdir $WS/data/raw_reads/
+echo "Raw read download: 4/4 complete"
 
 # Feline reference genome
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/181/335/GCF_000181335.3_Felis_catus_9.0/GCF_000181335.3_Felis_catus_9.0_genomic.fna.gz \
   -O $WS/data/bwa/GCF_000181335.3_Felis_catus_9.0_genomic.fna.gz
+echo "Feline reference download complete"
 
 # Viral reference genome
 wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.genomic.gbff.gz \
@@ -41,7 +46,9 @@ wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.3.genomic.gbff.gz \
 wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.4.genomic.gbff.gz \
   -O $WS/data/bwa/viral.4.genomic.faa.gz
 
+echo "Viral reference download complete"
+
 # Unpack and merge
-zcat $WS/data/bwa/viral.*.faa.gz > $WS/data/bwa/viral_merged.faa
+zcat $WS/data/bwa/viral.*.faa.gz > $VIRAL_REFERENCE_GENOME
 # Index for further use
 bwa index $VIRAL_REFERENCE_GENOME
