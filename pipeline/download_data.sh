@@ -54,7 +54,14 @@ zcat $WS/data/bwa/viral.*.faa.gz > $VIRAL_REFERENCE_GENOME
 bwa index $VIRAL_REFERENCE_GENOME
 
 # Adapters for trimmomatic
-echo ">PrefixPE/1" >> $WS/TruSeq3-PE.fa
-echo "TACACTCTTTCCCTACACGACGCTCTTCCGATC" >> $WS/TruSeq3-PE.fa
-echo ">PrefixPE/2" >> $WS/TruSeq3-PE.fa
-echo "GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT" >> $WS/TruSeq3-PE.fa
+wget https://raw.githubusercontent.com/timflutre/trimmomatic/master/adapters/TruSeq3-PE.fa \
+  -O $WS/TruSeq3-PE.fa
+
+# Megan Annotree Mapping
+wget https://software-ab.informatik.uni-tuebingen.de/download/megan-annotree/megan-mapping-annotree-June-2021.db.zip \
+  -O $WS/data/diamond/megan-mapping-annotree-June-2021.db.zip
+unzip $WS/data/diamond/megan-mapping-annotree-June-2021.db.zip
+
+wget https://software-ab.informatik.uni-tuebingen.de/download/megan-annotree/annotree.fasta.gz \
+  -O $WS/data/diamond/annotree.fasta.gz
+gunzip $WS/data/diamond/annotree.fasta.gz

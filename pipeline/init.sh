@@ -46,6 +46,7 @@ conda install -c bioconda trimmomatic=0.39 -y
 conda install -c conda-forge minifasta=2.4 -y
 conda install -c bioconda fastq=1.2.2 -y
 conda install -c bioconda fastqc -y
+conda install unzip -y
 
 conda create -n cat-megahit-env python=3.6 -y
 

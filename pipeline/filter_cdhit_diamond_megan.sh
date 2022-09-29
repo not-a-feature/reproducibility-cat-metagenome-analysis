@@ -28,9 +28,11 @@ $CDHIT_BIN  -i $PY_OUT_PATH -o $OUT_PATH -c 0.95 -M 90000 -T 0
 
 # Runs diamond and megan to assign taxonomy
 DAA_OUT_PATH="$WS/data/diamond/metagen_ref_matches.daa"
+DIAMOND_DB_FASTA="$WS/data/diamond/annotree.fasta"
 DIAMONDDB="$WS/data/diamond/annotree.dmnd"
 MEGANDB="$WS/pipeline/diamond/megan-mapping-annotree-June-2021.db"
 
+diamond makedb --in $DIAMOND_DB_FASTA -d $DIAMONDDB
 diamond blastx -p 60 -d $DIAMONDDB -q $OUT_PATH -o $DAA_OUT_PATH --outfmt 100
 daa-meganizer -i $DAA_OUT_PATH -mdb $MEGANDB 
 
