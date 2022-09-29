@@ -4,7 +4,6 @@ set -e
 # Download and prepare all necessary files from the NCBI archives
 # Takes 4 sample ids as input
 
-VIRAL_REFERENCE_GENOME="$WS/data/bwa/viral_merged.faa"
 
 INPUT_1=$1
 ID_1=$(basename $INPUT_1)
@@ -16,6 +15,7 @@ INPUT_4=$4
 ID_4=$(basename $INPUT_4)
 
 WS=$5
+VIRAL_REFERENCE_GENOME="$WS/data/bwa/viral_merged.faa"
 
 # Raw Reads
 # Download 4 of the 16 raw reads from the SRA.
