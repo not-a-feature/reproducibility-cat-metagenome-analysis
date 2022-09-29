@@ -4,6 +4,10 @@ set -e
 # Initialisation script to prepare everything for the complete pipeline
 # Please check the memory / threads parameters in the sub-files and adapt if necessary.
 
+# This will install version 4.8.1 of cd-hit
+# For the version 3.7 download the binary manually
+# In any case: go to "pipeline/filter_cdhit_diamond_megan.sh" and set the correct path/command
+
 WS="/workspace/reproducibility-cat-metagenome-analysis"
 CONDA_SH_PATH="/workspace/kreuerju/miniconda3/etc/profile.d/conda.sh"
 
@@ -40,8 +44,4 @@ conda env create --file $WS/data/cat-base-env.yaml
 conda env create --file $WS/data/cat-diamond-env.yaml
 conda env create --file $WS/data/cat-megahit-env.yaml
 
-
-# Install version 0.38 of cd-hit
-# Or download the binary and adapt the path in "pipeline/filter_cdhit_diamond_megan.sh"
-# conda install -c bioconda cd-hit -y
 
