@@ -25,7 +25,7 @@ CONTIGS_FILE="$CONTIGS_OUTPUT_DIR/$BASENAME.contig.aligned"
 
 #bwa mem
 echo "Aligning against reference metagenom"
-bwa mem -t 25 \
+bwa mem -t 60 \
 	$METAGENOME \
 	$PE_FORWARD $PE_REVERSE \
 	-o "$BWA_OUTPUT_DIR/$BASENAME.metaaligned.bam"

@@ -54,7 +54,7 @@ UNPAIRED_TRIMMED_REVERSE=$TRIMMED_PATH/"${BASENAME}.utr.fastq"
 UNPAIRED_MERGED=$TRIMMED_PATH/"${BASENAME}.um.fastq"
 
 echo "Trimming reads."
-trimmomatic PE -threads 25 \
+trimmomatic PE -threads 60 \
 	    -trimlog $WS/"${BASENAME}.trim.log" \
 	    $INPUT_1 $INPUT_2 \
 	    $PAIRED_TRIMMED_FORWARD $UNPAIRED_TRIMMED_FORWARD \
@@ -67,7 +67,7 @@ echo "PEAR reads"
 $PEAR_BINARY -f $PAIRED_TRIMMED_FORWARD \
 	     -r $PAIRED_TRIMMED_REVERSE \
 	     -o $WS/pear_reads_2/$BASENAME \
-	     -j 30 # threads
+	     -j 60 # threads
 
 # merging PEAR and trimmomatic stuff
 
@@ -78,12 +78,12 @@ cat $PEAR_MERGED $UNPAIRED_TRIMMED_FORWARD $UNPAIRED_TRIMMED_REVERSE > $UNPAIRED
 
 echo "Map vs. cat reference."
 echo "Filtering cats. 1/2"
-bwa mem -t 25 \
+bwa mem -t 60 \
    $CAT_REFERENCE_GENOME \
    $PEAR_FORWARD $PEAR_REVERSE \
    -o "$BWA_OUTPUT_DIR/$BASENAME.cataligned.pe.bam"
 echo "Filtering cats. 2/2"
-bwa mem -t 25 \
+bwa mem -t 60 \
    $CAT_REFERENCE_GENOME \
    $UNPAIRED_MERGED \
    -o "$BWA_OUTPUT_DIR/$BASENAME.cataligned.merged.bam"
@@ -105,9 +105,9 @@ python3 $FILTER_SCRIPT -l $INDEX_FILE_MERGED -fq $UNPAIRED_MERGED -o $NOCAT_MERG
 
 echo "Map vs. virus reference."
 echo "Filtering viruses. 1/2"
-bwa mem -t 25 $VIRAL_REFERENCE_GENOME $NOCAT_FORWARD $NOCAT_REVERSE -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.pe.bam"
+bwa mem -t 60 $VIRAL_REFERENCE_GENOME $NOCAT_FORWARD $NOCAT_REVERSE -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.pe.bam"
 echo "Filtering viruses. 2/2"
-bwa mem -t 25 $VIRAL_REFERENCE_GENOME $NOCAT_MERGED -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.merged.bam"
+bwa mem -t 60 $VIRAL_REFERENCE_GENOME $NOCAT_MERGED -o $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.merged.bam"
 
 echo "Extracting headers."
 samtools view -Shf 4 -h $BWA_OUTPUT_DIR/"$BASENAME.virusaligned.nocat.pe.bam" > $NOCAT_SAM_UNMERGED
