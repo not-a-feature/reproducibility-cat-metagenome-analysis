@@ -40,7 +40,7 @@ NOCAT_MERGED="$WS/data/extracted/$BASENAME.merged.nocat.fq"
 NOCAT_SAM_UNMERGED="$BWA_OUTPUT_DIR/$BASENAME.nocat.pe.sam"
 NOCAT_SAM_MERGED="$BWA_OUTPUT_DIR/$BASENAME.nocat.merged.sam"
 
-TRIMMED_PATH="$WS/data/trimmed/"
+TRIMMED_PATH="$WS/data/trimmed"
 
 NOCAT_INDEX_FILE_UNMERGED="$WS/data/extracted/$BASENAME.nocat.pe.index"
 NOCAT_INDEX_FILE_MERGED="$WS/data/extracted/$BASENAME.nocat.merged.index"
@@ -66,7 +66,7 @@ trimmomatic PE -threads 60 \
 echo "PEAR reads"
 $PEAR_BINARY -f $PAIRED_TRIMMED_FORWARD \
      -r $PAIRED_TRIMMED_REVERSE \
-     -o $WS/pear_reads_2/$BASENAME \
+     -o $WS/pear_reads/$BASENAME \
      -j 60 # threads
 
 # merging PEAR and trimmomatic stuff
