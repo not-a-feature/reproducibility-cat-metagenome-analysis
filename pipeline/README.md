@@ -14,3 +14,7 @@ This folder includes all python / bash scripts used for the recreation of the or
 | init.sh | Create folder structure and conda enviroments with all required dependencies |
 | main.sh | Main script to run the pipeline (run init.sh first) |
 | megahit.sh | Creates a metagenomic reference using the preprocessed reads. |
+| pipeline_overview.png | Overview of the pipeline |
+
+## Overview
+![Pipeline overview](pipeline_overview.png)
