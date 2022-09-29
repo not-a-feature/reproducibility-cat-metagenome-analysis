@@ -10,7 +10,7 @@ BASENAME=$(basename $INPUT)
 WS=$2
 
 METAGENOME="$WS/data/bwa_indiv/metagen_ref.fa"
-RELFREQSCRIPT="$WS/pipeline/relative-frequencies.py"
+RELFREQSCRIPT="$WS/pipeline/relative_frequencies.py"
 TAXONOMY="$WS/data/classification"
 
 BWA_OUTPUT_DIR="$WS/data/bwa_indiv"
