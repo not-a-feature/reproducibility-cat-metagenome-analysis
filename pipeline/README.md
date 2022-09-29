@@ -11,3 +11,6 @@ This folder includes all python / bash scripts used for the recreation of the or
 | download_data.sh | Download and prepares raw data form NCBI archives |
 | filter_cdhit_diamond_megan.sh | Filters metagenomic reference and assignes a taxonomy to it using diamond and megan |
 | filter_raw_reads.sh | Preprocess raw reads, filter matche against feline / viral reference out | 
+| init.sh | Create folder structure and conda enviroments with all required dependencies |
+| main.sh | Main script to run the pipeline (run init.sh first) |
+| megahit.sh | Creates a metagenomic reference using the preprocessed reads. |

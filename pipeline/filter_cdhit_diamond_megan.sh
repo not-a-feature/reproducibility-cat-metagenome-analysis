@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Takes the megahit reference, filters it, and assignes a taxonomy to it using diamond and megan
+# Takes the megahit reference, filters it, and assigns a taxonomy to it using diamond and megan
 # Saves the meganized daa to data/diamond/metagen_red_matches.daa
 
 # INPUT = reference fasta
@@ -35,8 +35,6 @@ diamond blastx -p 60 -d $DIAMONDDB -q $OUT_PATH -o $DAA_OUT_PATH --outfmt 100
 daa-meganizer -i $DAA_OUT_PATH -mdb $MEGANDB 
 
 daa2info -i $DAA_OUT_PATH -r2c Taxonomy -n >> $CLASSIFICATION_PATH
-
-
 
 # BWA index for individual alignment of samples against metagenomic reference
 cp $OUT_PATH $BWA_PATH

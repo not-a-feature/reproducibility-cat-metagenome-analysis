@@ -2,7 +2,7 @@
 set -e
 
 # Takes sample id (eg.: SRR16235395) as input, aligns the reads against the feline
-# and viral reference genome. Matches againts those references are filtered out. 
+# and viral reference genome. Matches against those references are filtered out. 
 
 # Read name
 INPUT=$1
