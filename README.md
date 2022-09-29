@@ -8,6 +8,7 @@ This repository contains all supplementary files for the above-mentioned paper/r
 | -------- | ----------  |
 | contig_size_anaysis |  R script and raw data for the contig-size analysis |
 | data | Data such as computed contigs and conda enviroment exports |
+| fastqc_reports | FastQC/MultiQC reports of raw / trimmed / filteres reads |
 | pipeline | The complete pipeline including all scripts | 
 
 ## Abstract
