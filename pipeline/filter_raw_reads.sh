@@ -55,19 +55,19 @@ UNPAIRED_MERGED=$TRIMMED_PATH/"${BASENAME}.um.fastq"
 
 echo "Trimming reads."
 trimmomatic PE -threads 60 \
-	    -trimlog $WS/"${BASENAME}.trim.log" \
-	    $INPUT_1 $INPUT_2 \
-	    $PAIRED_TRIMMED_FORWARD $UNPAIRED_TRIMMED_FORWARD \
-	    $PAIRED_TRIMMED_REVERSE $UNPAIRED_TRIMMED_REVERSE \
-	    ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 MINLEN:36
+    -trimlog $WS/"${BASENAME}.trim.log" \
+    $INPUT_1 $INPUT_2 \
+    $PAIRED_TRIMMED_FORWARD $UNPAIRED_TRIMMED_FORWARD \
+    $PAIRED_TRIMMED_REVERSE $UNPAIRED_TRIMMED_REVERSE \
+    ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 MINLEN:36
 
 # pear reads
 
 echo "PEAR reads"
 $PEAR_BINARY -f $PAIRED_TRIMMED_FORWARD \
-	     -r $PAIRED_TRIMMED_REVERSE \
-	     -o $WS/pear_reads_2/$BASENAME \
-	     -j 60 # threads
+     -r $PAIRED_TRIMMED_REVERSE \
+     -o $WS/pear_reads_2/$BASENAME \
+     -j 60 # threads
 
 # merging PEAR and trimmomatic stuff
 
