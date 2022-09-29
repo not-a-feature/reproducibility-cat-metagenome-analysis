@@ -52,3 +52,9 @@ echo "Viral reference download complete"
 zcat $WS/data/bwa/viral.*.faa.gz > $VIRAL_REFERENCE_GENOME
 # Index for further use
 bwa index $VIRAL_REFERENCE_GENOME
+
+# Adapters for trimmomatic
+echo ">PrefixPE/1" >> $WS/TruSeq3-PE.fa
+echo "TACACTCTTTCCCTACACGACGCTCTTCCGATC" >> $WS/TruSeq3-PE.fa
+echo ">PrefixPE/2" >> $WS/TruSeq3-PE.fa
+echo "GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT" >> $WS/TruSeq3-PE.fa
