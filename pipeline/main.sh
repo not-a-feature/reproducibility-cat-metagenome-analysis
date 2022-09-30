@@ -47,9 +47,9 @@ $WS/pipeline/filter_cdhit_diamond_megan.sh $WS/data/assembly/final.contigs.fa $W
 echo "Align preprocessed reads against metagenomic reference"
 conda activate cat-base-env
 
-$WS/pipeline/bwa_metagenome.sh $ID_1 $WS
-$WS/pipeline/bwa_metagenome.sh $ID_2 $WS
-$WS/pipeline/bwa_metagenome.sh $ID_3 $WS
-$WS/pipeline/bwa_metagenome.sh $ID_4 $WS
+$WS/pipeline/bwa_metagenome.sh $ID_1 $WS true
+$WS/pipeline/bwa_metagenome.sh $ID_2 $WS false
+$WS/pipeline/bwa_metagenome.sh $ID_3 $WS false
+$WS/pipeline/bwa_metagenome.sh $ID_4 $WS false
 
 echo "DONE!"

@@ -8,6 +8,7 @@ INPUT=$1
 BASENAME=$(basename $INPUT)
 
 WS=$2
+BWA_INDEX=$3
 
 METAGENOME="$WS/data/bwa_indiv/metagen_ref.fa"
 RELFREQSCRIPT="$WS/pipeline/relative_frequencies.py"
@@ -22,6 +23,11 @@ PE_REVERSE="$WS/data/pear_reads/$BASENAME.unassembled.reverse.fastq"
 
 SAM_FILE="$CONTIGS_OUTPUT_DIR/$BASENAME.extracted.sam"
 CONTIGS_FILE="$CONTIGS_OUTPUT_DIR/$BASENAME.contig.aligned"
+
+# Bwa index only once
+if [ "$BWA_INDEX" == "true" ]; then
+    bwa index $METAGENOME
+fi
 
 #bwa mem
 echo "Aligning against reference metagenom"

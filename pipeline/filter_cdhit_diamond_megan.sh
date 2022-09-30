@@ -40,4 +40,3 @@ daa2info -i $DAA_OUT_PATH -r2c Taxonomy -n >> $CLASSIFICATION_PATH
 
 # BWA index for individual alignment of samples against metagenomic reference
 cp $OUT_PATH $BWA_PATH
-bwa index $BWA_PATH
