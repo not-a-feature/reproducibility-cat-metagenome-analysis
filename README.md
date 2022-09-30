@@ -10,7 +10,7 @@ This repository contains all supplementary files for the above-mentioned paper/r
 | data | Data such as computed contigs and conda enviroment exports |
 | fastqc_reports | FastQC/MultiQC reports of raw / trimmed / filteres reads |
 | pipeline | The complete pipeline including all scripts | 
-| report.pdf | The actual paper |
+| reproducibility-cat-metagenome-analysis.pdf | The actual paper |
 
 ## Abstract
 Obesity is an issue that deserves investigation even in domestic cats. Here we try to reproduce the whole-genome shotgun metagenomic study performed by Ma et al. Using a subset of the available data, we reconstruct a reference metagenome from both obese and lean cats and use this for whole-genome-based taxonomic community profiling. In this, we are able to reproduce the main features of the discovered community profile. 
